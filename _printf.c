@@ -15,8 +15,9 @@ int _printf(const char *format, ...)
 	char buffer[BUFF_SIZE];
 
 	if (format == NULL)
-		return (-1);
 
+		return (-1);
+	
 	va_start(list, format);
 
 	for (i = 0; format && format[i] != '\0'; i++)
@@ -46,7 +47,7 @@ int _printf(const char *format, ...)
 	}
 
 	print_buffer(buffer, &buff_ind);
-
+	
 	va_end(list);
 
 	return (printed_chars);
